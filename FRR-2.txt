@@ -1,0 +1,33 @@
+!Current configuration:
+!
+frr version 4.0
+frr defaults traditional
+hostname frr
+hostname FRR-2
+username cumulus nopassword
+!
+service integrated-vtysh-config
+!
+password frr
+enable password frr
+!
+log file zebra.log
+!
+interface ens3
+ ip address 10.0.0.2/24
+!
+router bgp 1
+ coalesce-time 1000
+ neighbor 10.0.0.1 remote-as internal
+ !
+ address-family ipv6 unicast
+  neighbor 10.0.0.1 activate
+ exit-address-family
+ !
+ address-family l2vpn evpn
+  neighbor 10.0.0.1 activate
+ exit-address-family
+!
+line vty
+!
+end

@@ -1,0 +1,1 @@
+Content reflects deep dive into Multiprotocol BGP further explained within the blog post here: http://networktechstudy.com/mp-bgp-1

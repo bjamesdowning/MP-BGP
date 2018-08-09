@@ -1,0 +1,25 @@
+FRR-2# sho bgp ipv6 unicast 
+BGP table version is 6, local router ID is 10.0.0.2
+Status codes: s suppressed, d damped, h history, * valid, > best, = multipath,
+              i internal, r RIB-failure, S Stale, R Removed
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*>i2001::1/128      fe80::50d2:48ff:fe63:9100
+                                             0    100      0 i
+*>i2001:aaaa:bbbb::/64
+                    fe80::50d2:48ff:fe63:9100
+                                             0    100      0 i
+
+Displayed  2 routes and 2 total paths
+FRR-2# sho bgp ipv4 unicast 
+BGP table version is 3, local router ID is 10.0.0.2
+Status codes: s suppressed, d damped, h history, * valid, > best, = multipath,
+              i internal, r RIB-failure, S Stale, R Removed
+Origin codes: i - IGP, e - EGP, ? - incomplete
+
+   Network          Next Hop            Metric LocPrf Weight Path
+*>i1.1.1.1/32       10.0.0.1                 0    100      0 i
+
+Displayed  1 routes and 1 total paths
+FRR-2# 
